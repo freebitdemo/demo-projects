@@ -1,13 +1,12 @@
 from flask import Flask, render_template, Response
-from processor.simple_streamer import SimpleStreamer
-# from processor.pedestrian_detector import PedestrianDetector
-# from processor.motion_detector import MotionDetector
+# from processor.simple_streamer import Processor
+# from processor.pedestrian_detector import Processor
+# from processor.motion_detector import Processor
+from processor.person_detector import Processor
 import time
 import threading
 
-video_camera = SimpleStreamer(flip=False)
-# video_camera = PedestrianDetector(flip=False)
-# video_camera = MotionDetector(flip=False)
+video_camera = Processor(flip=False)
 
 app = Flask(__name__)
 

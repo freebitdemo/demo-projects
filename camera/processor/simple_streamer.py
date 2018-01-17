@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 
 
-class SimpleStreamer(object):
+class Processor(object):
     def __init__(self, flip = False):
         self.vs = PiVideoStream(resolution=(800, 608)).start()
         self.flip = flip

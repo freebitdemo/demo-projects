@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 
 
-class PedestrianDetector(object):
+class Processor(object):
     def __init__(self, flip = True):
         self.vs = PiVideoStream(resolution=(800, 608)).start()
         self.flip = flip
